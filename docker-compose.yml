@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: roomassets-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: roomassets
+      MYSQL_USER: roomassets
+      MYSQL_PASSWORD: roomassets_password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'false'
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - roomassets-network
+
+  # Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: roomassets-backend
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: mysql://roomassets:roomassets_password@db:3306/roomassets
+      PORT: 3000
+      JWT_SECRET: ${JWT_SECRET:-your-secret-key-change-in-production}
+      VITE_APP_ID: ${VITE_APP_ID:-}
+      OAUTH_SERVER_URL: ${OAUTH_SERVER_URL:-}
+      VITE_OAUTH_PORTAL_URL: ${VITE_OAUTH_PORTAL_URL:-}
+      OWNER_OPEN_ID: ${OWNER_OPEN_ID:-}
+      OWNER_NAME: ${OWNER_NAME:-}
+      BUILT_IN_FORGE_API_URL: ${BUILT_IN_FORGE_API_URL:-}
+      BUILT_IN_FORGE_API_KEY: ${BUILT_IN_FORGE_API_KEY:-}
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - roomassets-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  roomassets-network:
+    driver: bridge

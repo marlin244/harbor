@@ -1,0 +1,170 @@
+{
+  "rooms": [
+    {
+      "id": "room-001",
+      "name": "Конференц-зал А",
+      "capacity": 50,
+      "features": ["Проектор", "Белая доска", "Видеоконференция"]
+    },
+    {
+      "id": "room-002",
+      "name": "Переговорная 1",
+      "capacity": 8,
+      "features": ["Круглый стол", "Телефон"]
+    },
+    {
+      "id": "room-003",
+      "name": "Аудитория 101",
+      "capacity": 120,
+      "features": ["Проектор", "Микрофон", "Звуковая система", "Сценическое освещение"]
+    },
+    {
+      "id": "room-004",
+      "name": "Офис открытого типа",
+      "capacity": 30,
+      "features": ["Рабочие столы", "WiFi"]
+    },
+    {
+      "id": "room-005",
+      "name": "Переговорная 2",
+      "capacity": 6,
+      "features": ["Телефон", "Монитор"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-001",
+      "name": "Проектор Sony VPL-FHZ75",
+      "inventoryCode": "PROJ-2024-001",
+      "status": "available"
+    },
+    {
+      "id": "asset-002",
+      "name": "Ноутбук Dell XPS 15",
+      "inventoryCode": "LAPTOP-2024-001",
+      "status": "available"
+    },
+    {
+      "id": "asset-003",
+      "name": "Микрофон Shure SM7B",
+      "inventoryCode": "MIC-2024-001",
+      "status": "available"
+    },
+    {
+      "id": "asset-004",
+      "name": "Видеокамера Canon EOS R5",
+      "inventoryCode": "CAM-2024-001",
+      "status": "maintenance"
+    },
+    {
+      "id": "asset-005",
+      "name": "Экран проекционный 3x2м",
+      "inventoryCode": "SCREEN-2024-001",
+      "status": "available"
+    },
+    {
+      "id": "asset-006",
+      "name": "Звуковая система Bose",
+      "inventoryCode": "SOUND-2024-001",
+      "status": "available"
+    },
+    {
+      "id": "asset-007",
+      "name": "Интерактивная доска SMART Board",
+      "inventoryCode": "BOARD-2024-001",
+      "status": "unavailable"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "booking-001",
+      "resourceType": "room",
+      "resourceId": "room-001",
+      "title": "Встреча с клиентом",
+      "start": "2026-04-28T10:00:00Z",
+      "end": "2026-04-28T11:30:00Z",
+      "notes": "Обсуждение нового проекта"
+    },
+    {
+      "id": "booking-002",
+      "resourceType": "room",
+      "resourceId": "room-001",
+      "title": "Презентация результатов",
+      "start": "2026-04-28T14:00:00Z",
+      "end": "2026-04-28T15:30:00Z",
+      "notes": "Презентация для руководства"
+    },
+    {
+      "id": "booking-003",
+      "resourceType": "room",
+      "resourceId": "room-002",
+      "title": "Планерка отдела",
+      "start": "2026-04-28T09:00:00Z",
+      "end": "2026-04-28T09:45:00Z",
+      "notes": "Еженедельная планерка"
+    },
+    {
+      "id": "booking-004",
+      "resourceType": "room",
+      "resourceId": "room-003",
+      "title": "Лекция по искусственному интеллекту",
+      "start": "2026-04-29T10:00:00Z",
+      "end": "2026-04-29T12:00:00Z",
+      "notes": "Лекция для студентов 3-4 курса"
+    },
+    {
+      "id": "booking-005",
+      "resourceType": "asset",
+      "resourceId": "asset-001",
+      "title": "Проектор для конференции",
+      "start": "2026-04-28T09:00:00Z",
+      "end": "2026-04-28T18:00:00Z",
+      "notes": "Весь день для конференции"
+    },
+    {
+      "id": "booking-006",
+      "resourceType": "asset",
+      "resourceId": "asset-002",
+      "title": "Ноутбук для презентации",
+      "start": "2026-04-28T13:00:00Z",
+      "end": "2026-04-28T16:00:00Z",
+      "notes": "Для презентации в конференц-зале"
+    },
+    {
+      "id": "booking-007",
+      "resourceType": "room",
+      "resourceId": "room-004",
+      "title": "Встреча команды разработки",
+      "start": "2026-04-30T15:00:00Z",
+      "end": "2026-04-30T16:30:00Z",
+      "notes": "Обсуждение спринта"
+    },
+    {
+      "id": "booking-008",
+      "resourceType": "asset",
+      "resourceId": "asset-003",
+      "title": "Микрофон для записи подкаста",
+      "start": "2026-05-01T14:00:00Z",
+      "end": "2026-05-01T16:00:00Z",
+      "notes": "Запись нового выпуска"
+    },
+    {
+      "id": "booking-009",
+      "resourceType": "room",
+      "resourceId": "room-005",
+      "title": "Переговоры с партнёром",
+      "start": "2026-04-29T11:00:00Z",
+      "end": "2026-04-29T12:00:00Z",
+      "notes": "Обсуждение условий сотрудничества"
+    },
+    {
+      "id": "booking-010",
+      "resourceType": "asset",
+      "resourceId": "asset-005",
+      "title": "Экран для семинара",
+      "start": "2026-04-28T10:00:00Z",
+      "end": "2026-04-28T17:00:00Z",
+      "notes": "Весь день для семинара"
+    }
+  ]
+}

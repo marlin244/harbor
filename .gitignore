@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files — never commit secrets!
+.env
+.env.docker
+.env.local
+.env.*.local
+
+# Logs
+*.log
+.manus-logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Drizzle migrations (generated — keep if you use version control for migrations)
+# drizzle/migrations/
+
+# Test artifacts
+coverage/

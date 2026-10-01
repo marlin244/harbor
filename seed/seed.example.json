@@ -1,0 +1,73 @@
+{
+  "rooms": [
+    {
+      "id": "r-101",
+      "name": "Аудитория 101",
+      "capacity": 30,
+      "features": ["projector", "whiteboard", "air-conditioning"]
+    },
+    {
+      "id": "r-203",
+      "name": "Аудитория 203",
+      "capacity": 20,
+      "features": ["whiteboard"]
+    },
+    {
+      "id": "r-301",
+      "name": "Конференц-зал",
+      "capacity": 50,
+      "features": ["projector", "video-conferencing", "whiteboard"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "a-proj-1",
+      "name": "Проектор Epson",
+      "inventoryCode": "PRJ-001",
+      "status": "available"
+    },
+    {
+      "id": "a-laptop-1",
+      "name": "Ноутбук Dell",
+      "inventoryCode": "LAP-001",
+      "status": "available"
+    },
+    {
+      "id": "a-screen-1",
+      "name": "Экран для проектора",
+      "inventoryCode": "SCR-001",
+      "status": "maintenance"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b-1",
+      "resourceType": "room",
+      "resourceId": "r-101",
+      "title": "Семинар по TypeScript",
+      "start": "2025-09-05T08:00:00Z",
+      "end": "2025-09-05T09:30:00Z",
+      "notes": "Нужен HDMI кабель"
+    },
+    {
+      "id": "b-2",
+      "resourceType": "room",
+      "resourceId": "r-101",
+      "title": "Встреча команды",
+      "start": "2025-09-05T10:00:00Z",
+      "end": "2025-09-05T11:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "b-3",
+      "resourceType": "asset",
+      "resourceId": "a-proj-1",
+      "title": "Использование проектора",
+      "start": "2025-09-05T08:00:00Z",
+      "end": "2025-09-05T09:30:00Z",
+      "notes": "Для семинара"
+    }
+  ],
+  "exportedAt": "2025-09-04T12:00:00Z",
+  "schemaVersion": "1.0.0"
+}
