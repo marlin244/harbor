@@ -4,6 +4,8 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  // GitHub Pages serves the site from /<repo>/; set VITE_BASE=/harbor/ in CI
+  base: process.env.VITE_BASE ?? "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
